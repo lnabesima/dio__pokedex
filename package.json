@@ -1,0 +1,9 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Pokédex app",
+  "main": "index.js",
+  "author": "Lucas Nabesima",
+  "license": "MIT",
+  "private": false
+}
