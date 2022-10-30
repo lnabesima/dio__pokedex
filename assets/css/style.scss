@@ -1,0 +1,43 @@
+@use 'sass:math';
+@function calculateRem($size) {
+  @return math.div($size, 16px) * 1rem;
+}
+
+$primary-green: #14a06f;
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 1rem;
+
+  h1 {
+    padding: 0;
+  }
+
+  .pokemonList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+      margin: 0.5rem;
+      padding: 1rem;
+      background-color: $primary-green;
+      color: white;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      & img {
+        max-width: 100%;
+        height: calculateRem(100px);
+        align-self: flex-end;
+      }
+    }
+  }
+}
