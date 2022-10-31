@@ -24,7 +24,7 @@ $primary-green: #14a06f;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    li {
+    .pokemo {
       margin: 0.5rem;
       padding: 1rem;
       background-color: $primary-green;
