@@ -3,7 +3,8 @@
   @return math.div($size, 16px) * 1rem;
 }
 
-$primary-green: #14a06f;
+$primary-green: #49d0b0;
+$number-bg-green: #61e1ca;
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -24,7 +25,7 @@ $primary-green: #14a06f;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    .pokemo {
+    .pokemon {
       margin: 0.5rem;
       padding: 1rem;
       background-color: $primary-green;
@@ -33,11 +34,42 @@ $primary-green: #14a06f;
       display: flex;
       flex-direction: column;
 
-      & img {
-        max-width: 100%;
-        height: calculateRem(100px);
-        align-self: flex-end;
+      .number {
+        color: black;
+        opacity: 0.3;
+        text-align: right;
+        font-size: 0.625rem;
       }
+
+      .name {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .types {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .type {
+          background-color: $number-bg-green;
+          padding: 0.25rem 0.5rem;
+          margin-block: 0.25rem;
+          font-size: 0.625rem;
+          text-align: center;
+          border-radius: 20px;
+        }
+      }
+    }
+    .sprite {
+      max-width: 100%;
+      height: calculateRem(70px);
+      align-self: flex-end;
     }
   }
 }
